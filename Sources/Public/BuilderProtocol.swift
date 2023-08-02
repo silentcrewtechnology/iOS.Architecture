@@ -1,9 +1,3 @@
-//
-//  BuilderProtocol.swift
-//  
-//
-// 
-//
 import UIKit
 
 public protocol BuilderProtocol: AnyObject {

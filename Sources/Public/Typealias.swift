@@ -1,10 +1,3 @@
-//
-//  Typealias.swift
-//  
-//
-// 
-//
-
 import Foundation
 
 //MARK: - CLOUSURES
