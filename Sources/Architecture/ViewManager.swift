@@ -1,15 +1,13 @@
-import Foundation
-
 open class ViewManager<View: ViewProtocol> {
-
+    
     public var update: Closure<View.ViewProperties?>?
     public var create: Closure<View.ViewProperties?>?
-
-    // MARK: - Привязываем View с ViewModel
+    
+    /// Связываем View с ViewManager
     public func bind(with view: View) {
-        self.update = view.update(with:)
-        self.create = view.create(with:)
+        update = view.update(with:)
+        create = view.create(with:)
     }
-
-    public init(){}
+    
+    public init() { }
 }
