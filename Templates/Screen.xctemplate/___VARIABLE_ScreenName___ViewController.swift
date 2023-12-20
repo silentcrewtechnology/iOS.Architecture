@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Architecture
 
 final class ___VARIABLE_ScreenName___ViewController: ViewController<___VARIABLE_ScreenName___Feature>, ViewProtocol {
     
@@ -16,7 +17,7 @@ final class ___VARIABLE_ScreenName___ViewController: ViewController<___VARIABLE_
     
     struct ViewProperties {
         var accessibilityId = "___VARIABLE_ScreenName___ScreenController"
-        // var someView: SomeView.ViewEntity?
+        // var someView: SomeView.ViewProperties?
         // Здесь описываются свойства вью
         // нужно заменить SomeView на твою View
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Architecture
 
 final class ___VARIABLE_ScreenName___Builder: Builder<___VARIABLE_ScreenName___ViewController, ___VARIABLE_ScreenName___Updater, ___VARIABLE_ScreenName___Feature, Coordinator> {
     
@@ -22,6 +23,7 @@ final class ___VARIABLE_ScreenName___Builder: Builder<___VARIABLE_ScreenName___V
         viewUpdater.bind(view: view)
         let feature = ___VARIABLE_ScreenName___Feature.init(coordinator: coordinator)
         feature.viewUpdater = viewUpdater
+        self.view.feature = feature
         creating(feature: feature)
         start(feature: feature)
     }
@@ -36,8 +38,8 @@ final class ___VARIABLE_ScreenName___Builder: Builder<___VARIABLE_ScreenName___V
         // view.someView = someBuilder.view
         
         
-        // presenter.bind(
-        //    somePresenter: someBuilder.presenter,
+        // updater.bind(
+        //    someUpdater: someBuilder.updater,
         // )
     }
     

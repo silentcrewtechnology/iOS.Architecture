@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Architecture
 
 final class ___VARIABLE_ScreenName___Feature: FeatureProtocol {
     
@@ -52,7 +53,7 @@ extension ___VARIABLE_ScreenName___Feature {
     
     private func createAllProperties() -> ___VARIABLE_ScreenName___ViewController.ViewProperties {
         // Здесь создаем все View Entities, которые входят в экран
-        let entity = ___VARIABLE_ScreenName___ViewController.ViewProperties()
-        return entity
+        let property = ___VARIABLE_ScreenName___ViewController.ViewProperties()
+        return property
     }
 }
