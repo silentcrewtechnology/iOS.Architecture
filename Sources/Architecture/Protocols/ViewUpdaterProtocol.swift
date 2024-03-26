@@ -11,7 +11,7 @@ public protocol ViewUpdaterProtocol<V> {
     
     associatedtype V: ViewProtocol
     
-    var update: Clouser<V.ViewProperties?> { get }
+    var update: Closure<V.ViewProperties?> { get }
     var viewProperties: V.ViewProperties? { get }
     
     func bind(view: V)
