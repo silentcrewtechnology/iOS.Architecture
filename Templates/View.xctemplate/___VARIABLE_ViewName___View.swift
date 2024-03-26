@@ -7,8 +7,9 @@
 
 import UIKit
 import SnapKit
+import Architecture
 
-final class ___VARIABLE_ViewName___View:  UIView, ViewProtocol {
+final class ___VARIABLE_ViewName___View: UIView, ViewProtocol {
     
     deinit {
         print("💀 удалился ___VARIABLE_ViewName___View")

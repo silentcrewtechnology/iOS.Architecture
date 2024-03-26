@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Architecture
 
 final class ___VARIABLE_ViewName___ViewBuilder: ViewBuilder<___VARIABLE_ViewName___View, ___VARIABLE_ViewName___ViewUpdater> {
     

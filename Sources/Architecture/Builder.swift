@@ -21,7 +21,8 @@ open class Builder<V, U, F, C>: ViewBuilderProtocol where V: ViewProtocol, U: Vi
         self.viewUpdater = viewUpdater
     }
     
-    func creating(feature: F) { }
+    open func creating(feature: F) { }
     
-    func start(feature: F) { }
+    open func start(feature: F) { }
 }
+

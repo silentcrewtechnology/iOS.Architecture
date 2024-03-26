@@ -6,19 +6,20 @@
 //
 
 import Foundation
+import Architecture
 
 final class ___VARIABLE_ScreenName___Updater: ViewUpdater<___VARIABLE_ScreenName___ViewController> {
     
     deinit {
-        print("💀 удалился ___VARIABLE_ScreenName___ScreenPresenter")
+        print("💀 удалился ___VARIABLE_ScreenName___ScreenUpdater")
     }
     
-    // нужно заменить SomePresenter на твои
-    // private var somePresenter: SomePresenter?
+    // нужно заменить SomeUpdater на твои
+    // private var someUpdater: SomeUpdater?
     
-    // Здесь прописываем все presenter'ы вьюх, которые входят в экран
-    //func bind(somePresenter: SomePresenter) {
-    //    self.somePresenter = SomePresenter
+    // Здесь прописываем все updater'ы вьюх, которые входят в экран
+    //func bind(someUpdater: SomeUpdater) {
+    //    self.someUpdater = SomeUpdater
     //}
     
     func handle(state: ___VARIABLE_ScreenName___ViewController.State) {
@@ -31,7 +32,7 @@ final class ___VARIABLE_ScreenName___Updater: ViewUpdater<___VARIABLE_ScreenName
         update(properties: viewProperties)
     }
     
-    // Метод создания View, здесь настраиваем .init() у viewEntity
+    // Метод создания View, здесь настраиваем .init() у viewProperties
     private func create(properties: ___VARIABLE_ScreenName___ViewController.ViewProperties?) {
         guard let properties else { return }
         

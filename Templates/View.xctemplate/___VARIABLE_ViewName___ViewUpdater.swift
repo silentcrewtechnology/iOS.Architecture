@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Architecture
 
 final class ___VARIABLE_ViewName___ViewUpdater: ViewUpdater<___VARIABLE_ViewName___View> {
     
@@ -25,11 +26,11 @@ final class ___VARIABLE_ViewName___ViewUpdater: ViewUpdater<___VARIABLE_ViewName
         }
     }
     
-    // Метод создания View, здесь настраиваем .init() у viewEntity
+    // Метод создания View, здесь настраиваем .init() у viewProperties
     private func create(_ properties: ___VARIABLE_ViewName___View.ViewProperties?) {
         guard let properties else { return }
         
-        self.viewProperties = viewProperties
+        self.viewProperties = properties
     }
     
     // Метод, вызывающий обновление у View

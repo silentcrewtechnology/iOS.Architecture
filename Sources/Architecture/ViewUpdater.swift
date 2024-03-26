@@ -9,8 +9,8 @@ import Foundation
 
 open class ViewUpdater<V: ViewProtocol>: ViewUpdaterProtocol {
     
-    public var create: Clouser<V.ViewProperties?> = { _ in }
-    public var update: Clouser<V.ViewProperties?> = { _ in }
+    public var create: Closure<V.ViewProperties?> = { _ in }
+    public var update: Closure<V.ViewProperties?> = { _ in }
     public var viewProperties: V.ViewProperties?
     
     public required init() { }
