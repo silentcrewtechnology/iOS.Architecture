@@ -23,12 +23,12 @@ final class ___VARIABLE_ScreenName___ViewController: ViewController<___VARIABLE_
     }
     
     enum State {
-        case create(ViewProperties?)
+        case create(ViewProperties)
         // Здесь описываются состояния вью
     }
     
     // Здесь хранятся свойства вью, чтобы вызывать экшены
-    var viewProperties: ViewProperties?
+    private var viewProperties: ViewProperties = .init()
     
     // Ниже создаем внутренние вью элементы
     // MARK: UI Elements
@@ -45,11 +45,10 @@ final class ___VARIABLE_ScreenName___ViewController: ViewController<___VARIABLE_
     // Ниже функции от ViewProtocol'а
     // MARK: ViewProtocol
     
-    func update(viewProperties: ViewProperties?) {
-        guard let viewProperties else { return }
-        self.viewProperties = viewProperties
+    func update(viewProperties: ViewProperties) {
         view.accessibilityIdentifier = viewProperties.accessibilityId
         // Здесь обновляем все свойства вью
+        self.viewProperties = viewProperties
     }
     
     // MARK: Private funcs

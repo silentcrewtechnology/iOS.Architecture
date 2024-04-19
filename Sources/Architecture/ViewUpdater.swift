@@ -9,15 +9,14 @@ import Foundation
 
 open class ViewUpdater<V: ViewProtocol>: ViewUpdaterProtocol {
     
-    public var create: Closure<V.ViewProperties?> = { _ in }
-    public var update: Closure<V.ViewProperties?> = { _ in }
+    public var update: Closure<V.ViewProperties> = { _ in }
     public var viewProperties: V.ViewProperties?
     
     public required init() { }
     
     public func bind(view: V) {
         update = { [weak view] in
-            view?.update(viewProperties: $0)
+            view?.update(with: $0)
         }
     }
 }
