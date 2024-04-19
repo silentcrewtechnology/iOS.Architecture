@@ -26,23 +26,21 @@ final class ___VARIABLE_ScreenName___Updater: ViewUpdater<___VARIABLE_ScreenName
         // Здесь обрабатываем все состояния, которые может принять View
         switch state {
         case .create(let viewProperties):
-            create(properties: viewProperties)
+            create(with: viewProperties)
+            update(with: viewProperties)
         }
-        
-        update(properties: viewProperties)
     }
     
     // Метод создания View, здесь настраиваем .init() у viewProperties
-    private func create(properties: ___VARIABLE_ScreenName___ViewController.ViewProperties?) {
-        guard let properties else { return }
-        
-        self.viewProperties = properties
+    private func create(with viewProperties: ___VARIABLE_ScreenName___ViewController.ViewProperties) {
+        self.viewProperties = viewProperties
     }
     
     // Метод, вызывающий обновление у View
-    private func update(properties: ___VARIABLE_ScreenName___ViewController.ViewProperties?) {
+    private func update(with viewProperties: ___VARIABLE_ScreenName___ViewController.ViewProperties) {
         DispatchQueue.main.async {
-            self.update(properties)
+            self.update(viewProperties)
         }
+        self.viewProperties = viewProperties
     }
 }

@@ -11,6 +11,6 @@ public protocol ViewProtocol where Self: NSObject {
     
     associatedtype ViewProperties
     
-    func update(viewProperties: ViewProperties?)
+    func update(with viewProperties: ViewProperties)
 }
  
