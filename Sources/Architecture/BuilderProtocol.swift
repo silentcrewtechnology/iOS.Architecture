@@ -3,11 +3,11 @@ import Foundation
 
 public protocol BuilderProtocol {
     
-    associatedtype VIEW: ViewProtocol
-    associatedtype UPDATER: ViewUpdater<VIEW>
+    associatedtype View: ViewProtocol
+    associatedtype View_Updater: ViewUpdater<View>
     
-    var view: VIEW { get set }
-    var viewUpdater: UPDATER { get set }
+    var view: View { get set }
+    var viewUpdater: View_Updater { get set }
     
-    static func build(with viewProperties: VIEW.ViewProperties) -> Self
+    static func build(with viewProperties: View.ViewProperties) -> Self
 }
