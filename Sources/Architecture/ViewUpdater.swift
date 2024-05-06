@@ -1,21 +1,17 @@
 
 import Foundation
 
-open class ViewUpdater<View: ViewProtocol> {
+open class ViewUpdater<V: ViewProtocol> {
 
-    public var update: Closure<View.ViewProperties>?
+    public var update: Closure<V.ViewProperties>
     
-    var viewProperties: View.ViewProperties
-
-    public func bind(view: View) {
-        update = { [weak view] viewProperties in
-            view?.update(with: viewProperties)
-        }
-    }
+    var viewProperties: V.ViewProperties
 
     public init(
-        viewProperties: View.ViewProperties
+        viewProperties: V.ViewProperties,
+        update: @escaping Closure<V.ViewProperties>
     ) {
         self.viewProperties = viewProperties
+        self.update = update
     }
 }
