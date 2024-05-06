@@ -1,9 +1,3 @@
-//
-//  Typealias.swift
-//  
-//
-// 
-//
 
 import Foundation
 

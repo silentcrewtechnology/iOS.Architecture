@@ -1,16 +1,13 @@
-//
-//  BuilderProtocol.swift
-//  
-//
-// 
-//
-import UIKit
 
-public protocol BuilderProtocol: AnyObject {
+import Foundation
+
+public protocol BuilderProtocol {
     
-    associatedtype V : ViewProtocol
-    associatedtype VM: ViewManager<V>
+    associatedtype VIEW: ViewProtocol
+    associatedtype UPDATER: Updater<VIEW>
     
-    var viewManager: VM { get set }
-    var view       : V  { get set }
+    var view: VIEW { get set }
+    var updater: UPDATER { get set }
+    
+    static func build(with viewProperties: VIEW.ViewProperties) -> Self
 }
