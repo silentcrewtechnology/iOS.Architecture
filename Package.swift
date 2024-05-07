@@ -10,8 +10,6 @@ let package = Package(
             targets: ["Architecture"]),
     ],
     targets: [
-        .target(
-            name: "Architecture"
-        )
+        .target(name: "Architecture")
     ]
 )

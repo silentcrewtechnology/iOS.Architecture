@@ -1,22 +1,17 @@
-//
-//  ViewUpdater.swift
-//  StrongTeam
-//
-//  Created by Valery on 06.12.2023.
-//
 
 import Foundation
 
-open class ViewUpdater<V: ViewProtocol>: ViewUpdaterProtocol {
+open class ViewUpdater<V: ViewProtocol> {
+
+    public var update: Closure<V.ViewProperties>
     
-    public var update: Closure<V.ViewProperties> = { _ in }
-    public var viewProperties: V.ViewProperties?
-    
-    public required init() { }
-    
-    public func bind(view: V) {
-        update = { [weak view] in
-            view?.update(with: $0)
-        }
+    var viewProperties: V.ViewProperties
+
+    public init(
+        viewProperties: V.ViewProperties,
+        update: @escaping Closure<V.ViewProperties>
+    ) {
+        self.viewProperties = viewProperties
+        self.update = update
     }
 }
