@@ -5,12 +5,11 @@
 //  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
-import SnapKit
 import Architecture
+import UIKit
 
-final class ___VARIABLE_ScreenName___ViewController: ViewController<___VARIABLE_ScreenName___Feature>, ViewProtocol {
-    
+final class ___VARIABLE_ScreenName___VC: UIViewController, ViewProtocol {
+   
     deinit {
         print("💀 удалился ___VARIABLE_ScreenName___ScreenController")
     }
@@ -19,22 +18,26 @@ final class ___VARIABLE_ScreenName___ViewController: ViewController<___VARIABLE_
         var accessibilityId = "___VARIABLE_ScreenName___ScreenController"
         // var someView: SomeView.ViewProperties?
         // Здесь описываются свойства вью
-        // нужно заменить SomeView на твою View
-    }
-    
-    enum State {
-        case create(ViewProperties)
-        // Здесь описываются состояния вью
+        // и остальные нужные для ViewController параметры
     }
     
     // Здесь хранятся свойства вью, чтобы вызывать экшены
-    private var viewProperties: ViewProperties = .init()
+    var viewProperties: ViewProperties
     
     // Ниже создаем внутренние вью элементы
     // MARK: UI Elements
     
     // нужно заменить SomeView на твою View
     // var someView: SomeView?
+    
+    public init(viewProperties: ViewProperties) {
+        self.viewProperties = viewProperties
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +48,10 @@ final class ___VARIABLE_ScreenName___ViewController: ViewController<___VARIABLE_
     // Ниже функции от ViewProtocol'а
     // MARK: ViewProtocol
     
-    func update(viewProperties: ViewProperties) {
+    func update(with viewProperties: ViewProperties) {
+        self.viewProperties = viewProperties
         view.accessibilityIdentifier = viewProperties.accessibilityId
         // Здесь обновляем все свойства вью
-        self.viewProperties = viewProperties
     }
     
     // MARK: Private funcs

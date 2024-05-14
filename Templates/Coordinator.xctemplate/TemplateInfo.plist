@@ -12,11 +12,11 @@
 	<array>
 		<dict>
 			<key>Description</key>
-			<string>The name of the View to create</string>
+			<string>The name of the Coordinator to create</string>
 			<key>Identifier</key>
-			<string>ViewName</string>
+			<string>FlowName</string>
 			<key>Name</key>
-			<string>New ViewName Name:</string>
+			<string>New FlowName Name:</string>
 			<key>NotPersisted</key>
 			<true/>
 			<key>Required</key>
@@ -26,49 +26,21 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_ViewName___</string>
+			<string>___VARIABLE_FlowName___</string>
 			<key>Identifier</key>
-			<string>productName</string>
+			<string>flowName</string>
 			<key>Type</key>
 			<string>static</string>
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_ViewName___View</string>
+			<string>___VARIABLE_FlowName___Coordinator</string>
 			<key>Description</key>
-			<string>View name</string>
+			<string>Flow Coordinator name</string>
 			<key>Identifier</key>
-			<string>viewName</string>
+			<string>flowCoordinatorName</string>
 			<key>Name</key>
-			<string>View:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>___VARIABLE_ViewName___ViewUpdater</string>
-			<key>Description</key>
-			<string>Updater viewName</string>
-			<key>Identifier</key>
-			<string>updaterViewName</string>
-			<key>Name</key>
-			<string>Updater:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>___VARIABLE_ViewName___ViewBuilder</string>
-			<key>Description</key>
-			<string>Builder viewName</string>
-			<key>Identifier</key>
-			<string>builderViewName</string>
-			<key>Name</key>
-			<string>Builder:</string>
+			<string>flowCoordinator:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
@@ -76,6 +48,6 @@
 		</dict>
 	</array>
 	<key>Summary</key>
-	<string>This generates a new view module using VOF arc.</string>
+	<string>This generates a new Coordinator for using VOF arc.</string>
 </dict>
 </plist>

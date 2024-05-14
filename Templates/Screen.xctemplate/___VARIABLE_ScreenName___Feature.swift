@@ -8,52 +8,26 @@
 import Foundation
 import Architecture
 
-final class ___VARIABLE_ScreenName___Feature: FeatureProtocol {
+final class ___VARIABLE_ScreenName___Feature: FeatureCoordinatorProtocol {
     
     deinit {
         print("💀 удалился ___VARIABLE_ScreenName___Feature")
     }
     
-    // Указание с каким Энамом мы работаем
-    typealias ActionEnum = Action
+    private let builder: ___VARIABLE_ScreenName___VCBuilder
     
-    enum Action {
-        case start
-        // здесь описываем все экшены, которые могут прилететь от View
+    init(
+        builder: ___VARIABLE_ScreenName___VCBuilder
+    ) {
+        self.builder = builder
     }
+   
     
-    var viewUpdater: ___VARIABLE_ScreenName___Updater?
+    // MARK: Переходы с экрана
     
-    // нужно заменить Coordinator на твой Coordinator
-     var coordinator: Coordinator
+    var runNewFlow: ((Any) -> Void)?
     
-     init(coordinator: Coordinator) {
-        self.coordinator = coordinator
-     }
-    
-    func handle(action: Action) {
-        // Здесь обрабатываем все экшены, которые может принять interactor
-        switch action {
-        case .start:
-            start()
-        }
-    }
-    
-    private func start() {
-        // Здесь пишем код, который нужен пи создании экрана
-        let properties = createAllProperties()
-        viewUpdater?.handle(state: .create(properties))
-    }
-}
-
-
-// MARK: Creation
-
-extension ___VARIABLE_ScreenName___Feature {
-    
-    private func createAllProperties() -> ___VARIABLE_ScreenName___ViewController.ViewProperties {
-        // Здесь создаем все View Entities, которые входят в экран
-        let property = ___VARIABLE_ScreenName___ViewController.ViewProperties()
-        return property
+    func runFlow(data: Any?) -> (any BuilderProtocol)? {
+        return builder
     }
 }

@@ -20,24 +20,14 @@ final class ___VARIABLE_ViewName___View: UIView, ViewProtocol {
         // Здесь описываются свойства вью
     }
     
-    enum State {
-        case create(ViewProperties)
-        // Здесь описываются состояния вью
-    }
-    
     // Здесь хранятся свойства вью, чтобы вызывать экшены
-    private var viewProperties: ViewProperties = .init()
+    var viewProperties: ViewProperties
     
-    // Ниже создаем внутренние вью элементы
-    // MARK: UI Elements
-    
-    // MARK: Initialization
-    
-    init() {
+    public init(viewProperties: ViewProperties) {
+        self.viewProperties = viewProperties
         super.init(frame: .zero)
-        configureViews()
-        setupSubview()
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -46,10 +36,10 @@ final class ___VARIABLE_ViewName___View: UIView, ViewProtocol {
     // Ниже функции от ViewProtocol'а
     // MARK: ViewProtocol
     
-    func update(viewProperties: ViewProperties) {
+    func update(with viewProperties: ViewProperties) {
+        self.viewProperties = viewProperties
         accessibilityIdentifier = viewProperties.accessibilityId
         // Здесь обновляем все свойства вью
-        self.viewProperties = viewProperties
     }
     
     // MARK: Private funcs

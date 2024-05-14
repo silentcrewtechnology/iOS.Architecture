@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>This template provides a starting point for an application that uses a single view. It provides a view controller to manage the view, and a storyboard or nib file that contains the view.</string>
 	<key>Identifier</key>
-	<string>ru.abd.mobile</string>
+	<string>adbgtl</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>Options</key>
@@ -34,7 +34,7 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_ScreenName___ViewController</string>
+			<string>___VARIABLE_ScreenName___VC</string>
 			<key>Description</key>
 			<string>View Controller name</string>
 			<key>Identifier</key>
@@ -62,7 +62,7 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_ScreenName___Updater</string>
+			<string>___VARIABLE_ScreenName___VCUpdater</string>
 			<key>Description</key>
 			<string>Updater name</string>
 			<key>Identifier</key>
@@ -76,7 +76,7 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_ScreenName___Builder</string>
+			<string>___VARIABLE_ScreenName___VCBuilder</string>
 			<key>Description</key>
 			<string>Builder name</string>
 			<key>Identifier</key>
