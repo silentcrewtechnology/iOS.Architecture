@@ -3,5 +3,5 @@ import Foundation
 
 public protocol CoordinatorProtocol {
     
-    func setupFlow()
+    func setupFlow(completion: Closure<Any>)
 }
