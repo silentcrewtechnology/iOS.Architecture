@@ -2,7 +2,7 @@
 import Foundation
 
 /// Обьект регулирующий флоу всех координторов фичей проекта
-public protocol CoordinatorsProtocol {
+public protocol MainCoordinatorProtocol {
     
     /// Настройки всех кординторов проекта
     func setupCoordinatorsFlow()
