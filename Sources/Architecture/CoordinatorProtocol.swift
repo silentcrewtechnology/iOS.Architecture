@@ -8,5 +8,5 @@ public protocol CoordinatorProtocol {
     func setupFlow(completion: @escaping Closure<Any?>)
     
     /// Запуск нового флоу фичи
-    func startFlow()
+    func startFlow(data: Any?)
 }
