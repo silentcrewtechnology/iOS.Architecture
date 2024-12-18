@@ -1,6 +1,6 @@
-
 import Foundation
 
+@available(*, deprecated, message: "Dont use BuilderProtocol")
 public protocol BuilderProtocol {
     
     associatedtype V: ViewProtocol

@@ -8,6 +8,7 @@
 import Foundation
 
 /// Обьект регулирующий флоу одной фичи проекта c
+@available(*, deprecated, message: "Use CoordinatorProtocol")
 public protocol CreateCoordinatorProtocol {
     
     /// Настройки флоу
