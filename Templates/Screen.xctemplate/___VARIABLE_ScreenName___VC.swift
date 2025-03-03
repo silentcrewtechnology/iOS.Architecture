@@ -3,28 +3,32 @@
 import Architecture
 import UIKit
 
-final class ___VARIABLE_ScreenName___VC: UIViewController, ViewProtocol {
-   
+public final class ___VARIABLE_ScreenName___VC: UIViewController, ViewProtocol {
+    
     deinit {
         print("💀 удалился ___VARIABLE_ScreenName___ScreenController")
     }
     
-    struct ViewProperties {
+    public struct ViewProperties {
         var accessibilityId = "___VARIABLE_ScreenName___ScreenController"
-        // var someView: SomeView.ViewProperties?
-        // Здесь описываются свойства вью
+        // var someView: UIView
+        // Здесь описываются все внутренние View
         // и остальные нужные для ViewController параметры
+        
+        public init(
+            accessibilityId: String = "___VARIABLE_ScreenName___ScreenController"
+            // someView: UIView = .init()
+        ) {
+            self.accessibilityId = accessibilityId
+            // self.someView = someView
+        }
     }
     
+    // MARK: Properties
     // Здесь хранятся свойства вью, чтобы вызывать экшены
     var viewProperties: ViewProperties
     
-    // Ниже создаем внутренние вью элементы
-    // MARK: UI Elements
-    
-    // нужно заменить SomeView на твою View
-    // var someView: SomeView?
-    
+    // MARK: Init
     public init(viewProperties: ViewProperties) {
         self.viewProperties = viewProperties
         super.init(nibName: nil, bundle: nil)
@@ -34,28 +38,47 @@ final class ___VARIABLE_ScreenName___VC: UIViewController, ViewProtocol {
         fatalError()
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
-        configureViews()
-        setupSubview()
     }
     
-    // Ниже функции от ViewProtocol'а
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
     // MARK: ViewProtocol
-    
-    func update(with viewProperties: ViewProperties) {
-        self.viewProperties = viewProperties
-        view.accessibilityIdentifier = viewProperties.accessibilityId
+    public func update(with viewProperties: ViewProperties) {
         // Здесь обновляем все свойства вью
+        self.viewProperties = viewProperties
+        setupSubviews()
+        setupAccessibilityId()
     }
+}
+
+// MARK: Private funcs
+extension ___VARIABLE_ScreenName___VC {
     
-    // MARK: Private funcs
-    
-    private func configureViews() {
-        // Здесь настраиваем внутренние свойства - то, что не будет меняться
-    }
-    
-    private func setupSubview() {
+    private func setupSubviews() {
         // Здесь мы добавляем вьюхи и настраиваем констрейнты
+        // sutupSomeView(with: viewProperties)
+    }
+    
+        // MARK: Пример
+    // private func sutupSomeView(with: ViewProperties) {
+        // let some = viewProperties.somelogoView
+        // guard some.superview != view else { return }
+        // view.addSubview(some)
+        // some.snp.makeConstraints {
+        //     $0.centerX.equalToSuperview()
+        //}
+    // }
+    
+    private func setupAccessibilityId() {
+        view.isAccessibilityElement = true
+        view.accessibilityIdentifier = viewProperties.accessibilityId
     }
 }

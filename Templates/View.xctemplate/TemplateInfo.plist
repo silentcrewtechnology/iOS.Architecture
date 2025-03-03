@@ -48,13 +48,13 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_ViewName___ViewUpdater</string>
+			<string>___VARIABLE_ViewName___ViewService</string>
 			<key>Description</key>
-			<string>Updater viewName</string>
+			<string>ViewService Name</string>
 			<key>Identifier</key>
-			<string>updaterViewName</string>
+			<string>viewServiceName</string>
 			<key>Name</key>
-			<string>Updater:</string>
+			<string>ViewService:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
@@ -62,13 +62,13 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_ViewName___ViewBuilder</string>
+			<string>___VARIABLE_ViewName___ViewStyle</string>
 			<key>Description</key>
-			<string>Builder viewName</string>
+			<string>ViewStyle viewName</string>
 			<key>Identifier</key>
-			<string>builderViewName</string>
+			<string>viewStyleName</string>
 			<key>Name</key>
-			<string>Builder:</string>
+			<string>ViewStyle:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>

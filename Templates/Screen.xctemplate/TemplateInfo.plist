@@ -62,13 +62,13 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_ScreenName___VCUpdater</string>
+			<string>___VARIABLE_ScreenName___ViewServicesHandler</string>
 			<key>Description</key>
-			<string>Updater name</string>
+			<string>View Services Handler name</string>
 			<key>Identifier</key>
-			<string>updaterName</string>
+			<string>viewServicesHandler</string>
 			<key>Name</key>
-			<string>updater:</string>
+			<string>viewServicesHandler:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
@@ -76,13 +76,13 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_ScreenName___VCBuilder</string>
+			<string>___VARIABLE_ScreenName___ServiceFactory</string>
 			<key>Description</key>
-			<string>Builder name</string>
+			<string>Services Factory name</string>
 			<key>Identifier</key>
-			<string>builderName</string>
+			<string>serviceFactory</string>
 			<key>Name</key>
-			<string>Builder:</string>
+			<string>serviceFactory:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
