@@ -68,10 +68,16 @@ final class ___VARIABLE_ScreenName___Feature<VC: ViewProtocol>: FeatureProtocol 
             // someUIService: someUIService
         )
         
-        if let viewProperties = viewHandler.getViewFromServices() as? VC.ViewProperties {
-            // Если нужно дополнить или исправить viewProperties,
-            // то делаем это здесь
-            vc.update(with: viewProperties)
+        if var updatedProperties = viewHandler.getViewFromServices() as? VC.ViewProperties {
+            if var changeProps = updatedProperties as? AuthVC.ViewProperties {
+                // Если нужно дополнить или исправить viewProperties,
+                // то делаем это здесь
+                
+                if let safeUpdatedProperties = changeProps as? VC.ViewProperties {
+                    updatedProperties = safeUpdatedProperties
+                }
+            }
+            vc.update(with: updatedProperties)
         }
     }
 }
